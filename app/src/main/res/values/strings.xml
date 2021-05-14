@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Neo Finance Pro</string>
+
+
+    <string name="login">Логин</string>
+    <string name="neofinancepro">Neo Finance Pro</string>
+    <string name="sign_in">Вход</string>
+    <string name="password">Пароль</string>
+    <string name="sign_in_txt">Войти</string>
+    <string name="missing_password"><u>Забыли пароль?</u></string>
+    <string name="wrong_password">Неверный пароль</string>
+    <string name="password_recovery">Восстановления пароля</string>
+    <string name="back_to_home">Вернуться на страницу входа</string>
+    <string name="send_to_e_mail">Введите email указанный при регистрации, мы на него отправим ссылку для востановления пароля</string>
+    <string name="email">Email</string>
+    <string name="recovery">Восстановить пароль</string>
+    <string name="wrong_email">Неправильный email адрес</string>
+    <string name="type_new_password">Введите новый пароль</string>
+    <string name="type_password">Введите пароль</string>
+    <string name="repeat_password">Повторите пароль</string>
+    <string name="change_password">Изменить пароль</string>
+    <string name="password_dont_match">Пароли не совпадают</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="string_transactions">Журнал</string>
+    <string name="string_observe">Обзорный экран</string>
+    <string name="string_analytics">Аналитика</string>
+    <string name="string_account">Профиль</string>
+    <string name="add_transaction">Добавить транзакцию</string>
+    <string name="income">Доход</string>
+    <string name="expenditure">Расход</string>
+    <string name="transfer">Перевод</string>
+    <string name="add_income">Добавление дохода</string>
+    <string name="date">Дата<font color='#FF0000'>*</font></string>
+    <string name="input_amount">Введите сумму</string>
+    <string name="company">Компания<font color='#FF0000'>*</font></string>
+    <string name="account">Счет<font color='#FF0000'>*</font></string>
+    <string name="amount">Сумма<font color='#FF0000'>*</font></string>
+    <string name="account_choose">Выбор счета</string>
+    <string name="category">Категории<font color='#FF0000'>*</font></string>
+    <string name="income_category">Категории доходов</string>
+    <string name="expenditure_category">Категории расходов</string>
+    <string name="comments">Комментарий</string>
+    <string name="add">Добавить</string>
+    <string name="neolabs">Neolabs</string>
+    <string name="neobis">Neobis</string>
+    <string name="add_account">Добавить счет</string>
+    <string name="add_expenditure_txt">Добавление расхода</string>
+    <string name="add_transfer">Добавление перевода</string>
+    <string name="from_account">Со счета<font color='#FF0000'>*</font></string>
+    <string name="to_account">На счет<font color='#FF0000'>*</font></string>
+    <string name="general">Общее</string>
+    <string name="password_string">Пароль</string>
+    <string name="clear"><u>Очистить</u></string>
+    <string-array name="nameOfCompany">
+        <item>Доход</item>
+        <item>Все</item>
+        <item>Neolabs</item>
+        <item>Neobis</item>
+    </string-array>
+
+</resources>

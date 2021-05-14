@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_checklist"
+        android:title="Журнал" />
+    <item
+        android:id="@+id/analyticsFragment"
+        android:icon="@drawable/ic_chart"
+        android:title="Аналитика" />
+
+    <item
+        android:id="@+id/emptyItem"
+        android:title="" />
+
+    <item
+        android:id="@+id/settingsFragment"
+        android:icon="@drawable/ic_settings"
+        android:title="Панель" />
+
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_account_circle"
+        android:title="Профиль" />
+
+</menu>

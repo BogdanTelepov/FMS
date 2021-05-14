@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp"
+    app:cardCornerRadius="15dp">
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/img_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_arrow_up" />
+
+        <TextView
+            android:id="@+id/item_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@id/img_arrow"
+            android:text="14.01.2021"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/item_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_date"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="12dp"
+            android:text="Оплата за курсы"
+            android:textColor="#272323"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/item_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_category"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="15dp"
+            android:text="Без комментария"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/item_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_toLeftOf="@id/tv_som"
+            android:text="10000"
+            android:textColor="#DF3A57"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_som"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="16dp"
+            android:text="сом"
+            android:textColor="#DF3A57"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/item_bankCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_money"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="15dp"
+            android:text="Optima card"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/iv_man"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_bankCard"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toLeftOf="@id/item_personName"
+            android:src="@drawable/ic_man" />
+
+        <TextView
+            android:id="@+id/item_personName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_bankCard"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="16dp"
+            android:text="Айсалкын Ташматова"
+            android:textSize="12sp" />
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/dialog_bg">
+
+    <ImageView
+        android:id="@+id/img_closeBottomSheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_close" />
+
+
+    <TextView
+        android:fontFamily="@font/museo"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:text="Редактирование счета"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editBankAccountName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/custom_input"
+        android:hint="Название счёта"
+        android:inputType="text"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/editBankAccountAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editBankAccountName"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/custom_input"
+        android:hint="Сумма на счёте"
+        android:inputType="number"
+        android:padding="12dp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editBankAccountAmount">
+        <Button
+            android:id="@+id/btnSaveAccount"
+            android:layout_width="132dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="38dp"
+            android:layout_marginStart="38dp"
+            android:backgroundTint="#006666"
+            android:fontFamily="@font/poppins"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold"
+            android:layout_alignParentEnd="true"
+            android:text="Сохранить"
+            android:textAllCaps="false" />
+        <Button
+            android:id="@+id/btnCancelAccount"
+            android:layout_width="132dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginStart="38dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/poppins"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold"
+            android:textColor="#717171"
+            android:layout_alignParentStart="true"
+            android:text="Отменить"
+            android:textAllCaps="false"
+            app:strokeColor="#C4C4C4"
+            app:strokeWidth="2dp"/>
+
+
+</RelativeLayout>
+</RelativeLayout>

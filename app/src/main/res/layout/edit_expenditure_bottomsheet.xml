@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/dialog_bg"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/img_closeBottomSheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_close" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/museo"
+        android:text="Редактирование категории расходов"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutCompany"
+        android:layout_below="@+id/textView"
+        app:boxStrokeWidth="0dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/custom_input"
+        app:boxStrokeColor="@android:color/transparent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <AutoCompleteTextView
+            android:textAlignment="textStart"
+            android:textColor="#6B6B6B"
+            android:inputType="none"
+            android:id="@+id/company_actv"
+            android:text="Организация"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <EditText
+        android:id="@+id/editExpCategoryName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textInputLayoutCompany"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/custom_input"
+        android:hint="Название категории"
+        android:inputType="textNoSuggestions"
+        android:padding="22dp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editExpCategoryName">
+        <Button
+            android:id="@+id/btnSaveExp"
+            android:layout_width="132dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="38dp"
+            android:layout_marginStart="38dp"
+            android:backgroundTint="#006666"
+            android:fontFamily="@font/poppins"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold"
+            android:layout_alignParentEnd="true"
+            android:text="Сохранить"
+            android:textAllCaps="false" />
+        <Button
+            android:id="@+id/btnCancelExp"
+            android:layout_width="132dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginStart="38dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/poppins"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold"
+            android:textColor="#717171"
+            android:layout_alignParentStart="true"
+            android:text="Отменить"
+            android:textAllCaps="false"
+            app:strokeColor="#C4C4C4"
+            app:strokeWidth="2dp"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

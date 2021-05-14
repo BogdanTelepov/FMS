@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.home.HomeFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="#006666">
+
+        <ImageView
+            android:id="@+id/iv_girl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/ic_girl" />
+
+        <TextView
+            android:id="@+id/tv_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="40dp"
+            android:layout_toEndOf="@id/iv_girl"
+            android:text="Баланс"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tvBankAccountMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_balance"
+            android:layout_marginStart="25dp"
+            android:layout_toEndOf="@id/iv_girl"
+            android:fontFamily="@font/poppins"
+            android:text="0.0"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tv_som"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_balance"
+            android:layout_marginStart="3dp"
+            android:layout_toEndOf="@id/tvBankAccountMoney"
+            android:fontFamily="@font/poppins"
+            android:text="сом"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/im_expandLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_balance"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="18dp"
+            android:layout_toEndOf="@id/tv_som"
+            android:src="@drawable/ic_btn_down" />
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/expandable_layout_0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvBankAccountMoney"
+            android:layout_marginTop="5dp"
+            app:el_duration="1000"
+            app:el_expanded="false">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontalLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp">
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_bankAccount_listItem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/btnOpenBottomSheet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_toEndOf="@+id/rv_bankAccount_listItem"
+                            android:backgroundTint="#F3F6F8"
+                            android:src="@drawable/ic_add" />
+
+
+                    </RelativeLayout>
+
+
+                </HorizontalScrollView>
+
+
+            </RelativeLayout>
+
+
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout"
+        android:orientation="horizontal">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/withdrawType_chipGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:checkedChip="@+id/overall_balance"
+            app:chipSpacingHorizontal="15dp"
+            app:selectionRequired="true"
+            app:singleLine="true"
+            app:singleSelection="true">
+
+
+            <com.google.android.material.chip.Chip
+
+                android:id="@+id/overall_balance"
+                style="@style/CustomChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+
+                android:text="Все" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/income_balance"
+                style="@style/CustomChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="Доход"
+                app:checkedIconVisible="false"
+                app:chipIcon="@drawable/ic_arrow_down"
+                app:chipIconSize="15dp"
+                app:chipIconVisible="true"
+
+                app:iconStartPadding="5dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/expense_balance"
+                style="@style/CustomChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="Расход"
+                app:checkedIconVisible="false"
+                app:chipIcon="@drawable/ic_arrow_up"
+                app:chipIconSize="15dp"
+                app:chipIconVisible="true"
+
+                app:iconStartPadding="5dp" />
+
+
+        </com.google.android.material.chip.ChipGroup>
+
+
+    </LinearLayout>
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_list_transaction"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:visibility="visible" />
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="green">#006666</color>
+    <color name="login_error_red">#E41F1F</color>
+    <color name="blue">#3253C4</color>
+    <color name="background_cardColor">#006666</color>
+    <color name="background_mainColor">#E5E5E5</color>
+    <color name="fab_color">#00C14D</color>
+    <color name="gray">#E8E8E8</color>
+    <color name="focusable_btn">#5359F5</color>
+    <color name="lightGray">#F9F9F9</color>
+    <color name="colorPrimary">#6200EA</color>
+    <color name="darkGray">#4B4B4B</color>
+
+
+    //Custom Chip Style
+    <color name="checkChipBackgroundColor">#206200EA</color>
+    <color name="chipBackgroundColor">@color/lightGray</color>
+
+    <color name="checkedChipTextColor">@color/colorPrimary</color>
+    <color name="chipTextColor">@color/darkGray</color>
+
+</resources>

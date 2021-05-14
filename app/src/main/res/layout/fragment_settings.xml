@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.fragments.settings.SettingsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/museo"
+            android:text="Панель управления"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/withdrawType_chipGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:checkedChip="@+id/overall"
+                app:chipSpacingHorizontal="15dp"
+                app:selectionRequired="true"
+                app:singleLine="true"
+                app:singleSelection="true">
+
+
+                <com.google.android.material.chip.Chip
+
+                    android:id="@+id/overall"
+                    style="@style/CustomChipStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:text="Общее"
+                    app:checkedIconVisible="true"
+                    app:chipIcon="@drawable/ic_general"
+                    app:chipIconSize="15dp"
+                    app:chipIconVisible="true"
+                    app:iconStartPadding="5dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/income"
+                    style="@style/CustomChipStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginEnd="9dp"
+                    android:text="Доход"
+                    app:checkedIconVisible="false"
+                    app:chipIcon="@drawable/ic_arrow_down"
+                    app:chipIconSize="15dp"
+                    app:chipIconVisible="true"
+
+                    app:iconStartPadding="5dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/expense"
+                    style="@style/CustomChipStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="25dp"
+                    android:text="Расход"
+                    app:checkedIconVisible="false"
+                    app:chipIcon="@drawable/ic_arrow_up"
+                    app:chipIconSize="15dp"
+                    app:chipIconVisible="true"
+
+                    app:iconStartPadding="5dp" />
+            </com.google.android.material.chip.ChipGroup>
+        </LinearLayout>
+
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="30dp"-->
+        <!--            android:orientation="horizontal">-->
+
+        <!--            <Button-->
+        <!--                android:id="@+id/overall"-->
+        <!--                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginStart="36dp"-->
+        <!--                android:fontFamily="@font/roboto"-->
+        <!--                android:gravity="center"-->
+        <!--                android:defaultFocusHighlightEnabled="true"-->
+        <!--                android:text="@string/general"-->
+        <!--                android:textAllCaps="false"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:textSize="12sp"-->
+        <!--                app:icon="@drawable/ic_general"-->
+        <!--                app:iconTint="@color/gray" />-->
+
+        <!--            <Button-->
+        <!--                android:id="@+id/income"-->
+        <!--                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginStart="9dp"-->
+        <!--                android:fontFamily="@font/roboto"-->
+        <!--                android:gravity="center"-->
+        <!--                android:text="@string/income"-->
+        <!--                android:textAllCaps="false"-->
+        <!--                android:textColor="@color/black"-->
+        <!--                android:textSize="12sp"-->
+        <!--                app:icon="@drawable/ic_arrow_up"-->
+        <!--                app:iconTint="#DF3A57" />-->
+
+        <!--            <Button-->
+        <!--                android:id="@+id/expense"-->
+        <!--                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginStart="9dp"-->
+        <!--                android:fontFamily="@font/roboto"-->
+        <!--                android:gravity="center"-->
+        <!--                android:text="@string/expenditure"-->
+        <!--                android:textAllCaps="false"-->
+        <!--                android:textColor="@color/black"-->
+        <!--                android:textSize="12sp"-->
+        <!--                app:icon="@drawable/ic_arrow_down"-->
+        <!--                app:iconTint="#00C14D" />-->
+        <!--        </LinearLayout>-->
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/accounts_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="8dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/account_control_fragment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins"
+                                android:padding="8dp"
+                                android:text="Счета"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/add_account_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:background="@android:color/transparent"
+                                android:padding="8dp"
+                                android:src="@drawable/ic_add_btn" />
+
+                            <View
+                                style="@style/view"
+                                android:layout_below="@+id/add_account_btn" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/account_rv_control"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/account_control_fragment"
+                                android:padding="8dp"
+                                tools:listitem="@layout/account_item" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/users_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="36dp"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="8dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/user_control_fragment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins"
+                                android:padding="8dp"
+                                android:text="Пользователи"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/add_user_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:background="@android:color/transparent"
+                                android:padding="8dp"
+                                android:src="@drawable/ic_add_btn" />
+
+                            <View
+                                style="@style/view"
+                                android:layout_below="@+id/add_user_btn" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/user_rv_control"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/user_control_fragment"
+                                android:padding="8dp"
+                                tools:listitem="@layout/users_item" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/income_category_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="36dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="8dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/income_control_fragment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins"
+                                android:padding="8dp"
+                                android:text="Категории доходов"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/add_income_category_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:background="@android:color/transparent"
+                                android:padding="8dp"
+                                android:src="@drawable/ic_add_btn" />
+
+                            <View
+                                style="@style/view"
+                                android:layout_below="@+id/add_income_category_btn" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/income_rv_control"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/income_control_fragment"
+                                android:padding="8dp"
+                                tools:listitem="@layout/income_category_item" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/expenditure_category_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="36dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="8dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/expenditure_control_fragment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins"
+                                android:padding="8dp"
+                                android:text="Категории расходов"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/add_expenditure_category_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:background="@android:color/transparent"
+                                android:padding="8dp"
+                                android:src="@drawable/ic_add_btn" />
+
+                            <View
+                                style="@style/view"
+                                android:layout_below="@+id/add_expenditure_category_btn" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/expenditure_rv_control"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/expenditure_control_fragment"
+                                android:padding="8dp"
+                                tools:listitem="@layout/expenditure_category_item" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

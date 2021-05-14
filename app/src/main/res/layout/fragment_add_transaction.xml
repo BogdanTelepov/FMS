@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_bg">
+
+    <TextView
+        android:id="@+id/add_transaction_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/museo"
+        android:padding="8dp"
+        android:text="@string/add_transaction"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size"
+        android:textStyle="bold" />
+
+    <View style="@style/view" />
+
+    <LinearLayout
+        android:id="@+id/layoutIncome"
+        style="@style/linear_layout">
+
+        <TextView
+            android:id="@+id/income_txt"
+            style="@style/transactions_tv"
+            android:text="@string/income" />
+
+    </LinearLayout>
+
+    <View style="@style/view" />
+
+
+    <LinearLayout
+        android:id="@+id/layoutExpenditure"
+        style="@style/linear_layout">
+
+        <TextView
+            style="@style/transactions_tv"
+            android:text="@string/expenditure" />
+
+    </LinearLayout>
+
+    <View style="@style/view" />
+
+    <LinearLayout
+        android:id="@+id/layoutTransfer"
+        style="@style/linear_layout">
+
+        <TextView
+            style="@style/transactions_tv"
+            android:text="@string/transfer" />
+
+    </LinearLayout>
+
+    <View style="@style/view" />
+
+
+</LinearLayout>
